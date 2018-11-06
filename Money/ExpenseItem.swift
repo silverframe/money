@@ -7,10 +7,11 @@
 //
 
 class ExpenseItem {
-  var name: String?
-  var amount: Int
+    
+    var name: String?
+    var amount: Int
   
-  init(amount: Int) {
-    self.amount = amount
-  }
+    init(amount: Int) {
+        self.amount = amount
+    }
 }

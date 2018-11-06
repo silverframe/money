@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIV-yr-Hp8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lR1-fE-pX6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="d9g-dY-400">
+            <objects>
+                <navigationController id="lR1-fE-pX6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qsy-cP-Hec">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gIV-yr-Hp8" kind="relationship" relationship="rootViewController" id="HEm-31-kbF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKc-hQ-Br1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="107"/>
+        </scene>
         <!--Expenses View Controller-->
         <scene sceneID="Gxl-76-oih">
             <objects>
-                <viewController id="gIV-yr-Hp8" customClass="ExpensesViewController" customModule="Money" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpensesViewController" id="gIV-yr-Hp8" customClass="ExpensesViewController" customModule="Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0v-y7-NU1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BBX-OD-lhi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="264" width="375" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13z-rj-mMB">
@@ -28,31 +45,37 @@
                                         <rect key="frame" x="133" y="72" width="109" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Cherry"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BBX-OD-lhi" firstAttribute="trailing" secondItem="38K-15-0i4" secondAttribute="trailing" id="ISv-Ul-dBx"/>
                             <constraint firstItem="13z-rj-mMB" firstAttribute="trailing" secondItem="38K-15-0i4" secondAttribute="trailing" id="Lpy-JM-nQl"/>
+                            <constraint firstItem="BBX-OD-lhi" firstAttribute="top" secondItem="13z-rj-mMB" secondAttribute="bottom" id="TA3-gi-QOD"/>
                             <constraint firstItem="13z-rj-mMB" firstAttribute="top" secondItem="38K-15-0i4" secondAttribute="top" id="TYj-wN-dcd"/>
                             <constraint firstItem="13z-rj-mMB" firstAttribute="leading" secondItem="38K-15-0i4" secondAttribute="leading" id="Ysl-V4-RRC"/>
                             <constraint firstItem="BBX-OD-lhi" firstAttribute="bottom" secondItem="38K-15-0i4" secondAttribute="bottom" id="Z8O-mm-jFl"/>
-                            <constraint firstItem="BBX-OD-lhi" firstAttribute="height" secondItem="j0v-y7-NU1" secondAttribute="height" id="ZkQ-Sm-OIX"/>
                             <constraint firstItem="13z-rj-mMB" firstAttribute="height" secondItem="j0v-y7-NU1" secondAttribute="height" multiplier="0.3" id="ehZ-4q-UKE"/>
                             <constraint firstItem="BBX-OD-lhi" firstAttribute="leading" secondItem="38K-15-0i4" secondAttribute="leading" id="pyo-rp-Mfa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="38K-15-0i4"/>
                     </view>
                     <navigationItem key="navigationItem" id="6s9-Ir-JtQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q8T-LW-pw5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q8T-LW-pw5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="gIV-yr-Hp8" id="OzW-hu-v0a"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="expensesTableView" destination="BBX-OD-lhi" id="PaM-HW-Or9"/>
                         <outlet property="expensesTotalLabel" destination="gs8-ZA-f2b" id="bHR-ZZ-Zgd"/>
                     </connections>
                 </viewController>
@@ -60,29 +83,49 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="107.49625187406298"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="BDn-ja-VSB">
             <objects>
-                <viewController id="X4A-gx-8Vr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExpenseViewController" id="X4A-gx-8Vr" customClass="AddExpenseViewController" customModule="Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q8G-es-42C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TY-il-Ccq">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TY-il-Ccq">
                                 <rect key="frame" x="114" y="149" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Dusk"/>
                         <viewLayoutGuide key="safeArea" id="0fb-d9-80P"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Lw7-t1-qjL">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="0fj-Ir-0Jo">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="X4A-gx-8Vr" id="dUM-H7-Gzc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="expenseAmountTextField" destination="6TY-il-Ccq" id="8Wq-ba-1mr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PML-RN-nA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Cherry">
+            <color red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="0.90499997138977051" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Dusk">
+            <color red="0.21176470588235294" green="0.24313725490196078" blue="0.27843137254901962" alpha="0.90499997138977051" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

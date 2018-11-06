@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB2054922191A1CB00C80A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054912191A1CB00C80A43 /* AppDelegate.swift */; };
-		CB2054942191A1CB00C80A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054932191A1CB00C80A43 /* ViewController.swift */; };
-		CB2054972191A1CB00C80A43 /* Expenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2054952191A1CB00C80A43 /* Expenses.storyboard */; };
+		CB2054972191A1CB00C80A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2054952191A1CB00C80A43 /* Main.storyboard */; };
 		CB2054992191A1CE00C80A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2054982191A1CE00C80A43 /* Assets.xcassets */; };
 		CB20549C2191A1CE00C80A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB20549A2191A1CE00C80A43 /* LaunchScreen.storyboard */; };
 		CB2054A72191A1CE00C80A43 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054A62191A1CE00C80A43 /* MoneyTests.swift */; };
@@ -17,8 +16,11 @@
 		CB2054C02191A21200C80A43 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054BF2191A21200C80A43 /* ExpenseItem.swift */; };
 		CB2054C22191A29400C80A43 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054C12191A29400C80A43 /* ExpensesViewController.swift */; };
 		CB2054C42191A2A700C80A43 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054C32191A2A700C80A43 /* ExpensesViewModel.swift */; };
-		CB2054C62191A2BB00C80A43 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054C52191A2BB00C80A43 /* AddExpenseViewController.swift */; };
 		CB2054C82191A2D300C80A43 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2054C72191A2D300C80A43 /* AddExpenseViewModel.swift */; };
+		CBFF41842191AB6500C28FED /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF41832191AB6500C28FED /* AddExpenseViewController.swift */; };
+		CBFF41862191C5A600C28FED /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFF41852191C5A600C28FED /* ExpenseTableViewCell.xib */; };
+		CBFF41882191C62300C28FED /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF41872191C62300C28FED /* ExpenseTableViewCell.swift */; };
+		CBFF418A2191CD5300C28FED /* ExpenseSharedInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF41892191CD5300C28FED /* ExpenseSharedInstance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,7 @@
 /* Begin PBXFileReference section */
 		CB20548E2191A1CA00C80A43 /* Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Money.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2054912191A1CB00C80A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB2054932191A1CB00C80A43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB2054962191A1CB00C80A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Expenses.storyboard; sourceTree = "<group>"; };
+		CB2054962191A1CB00C80A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB2054982191A1CE00C80A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB20549B2191A1CE00C80A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB20549D2191A1CE00C80A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +56,11 @@
 		CB2054BF2191A21200C80A43 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		CB2054C12191A29400C80A43 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		CB2054C32191A2A700C80A43 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
-		CB2054C52191A2BB00C80A43 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		CB2054C72191A2D300C80A43 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
+		CBFF41832191AB6500C28FED /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		CBFF41852191C5A600C28FED /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		CBFF41872191C62300C28FED /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		CBFF41892191CD5300C28FED /* ExpenseSharedInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSharedInstance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,16 +112,18 @@
 			isa = PBXGroup;
 			children = (
 				CB2054912191A1CB00C80A43 /* AppDelegate.swift */,
-				CB2054932191A1CB00C80A43 /* ViewController.swift */,
 				CB2054C12191A29400C80A43 /* ExpensesViewController.swift */,
 				CB2054C32191A2A700C80A43 /* ExpensesViewModel.swift */,
-				CB2054C52191A2BB00C80A43 /* AddExpenseViewController.swift */,
+				CBFF41832191AB6500C28FED /* AddExpenseViewController.swift */,
 				CB2054C72191A2D300C80A43 /* AddExpenseViewModel.swift */,
 				CB2054BF2191A21200C80A43 /* ExpenseItem.swift */,
-				CB2054952191A1CB00C80A43 /* Expenses.storyboard */,
+				CBFF41872191C62300C28FED /* ExpenseTableViewCell.swift */,
+				CBFF41852191C5A600C28FED /* ExpenseTableViewCell.xib */,
+				CB2054952191A1CB00C80A43 /* Main.storyboard */,
 				CB2054982191A1CE00C80A43 /* Assets.xcassets */,
 				CB20549A2191A1CE00C80A43 /* LaunchScreen.storyboard */,
 				CB20549D2191A1CE00C80A43 /* Info.plist */,
+				CBFF41892191CD5300C28FED /* ExpenseSharedInstance.swift */,
 			);
 			path = Money;
 			sourceTree = "<group>";
@@ -244,9 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFF41862191C5A600C28FED /* ExpenseTableViewCell.xib in Resources */,
 				CB20549C2191A1CE00C80A43 /* LaunchScreen.storyboard in Resources */,
 				CB2054992191A1CE00C80A43 /* Assets.xcassets in Resources */,
-				CB2054972191A1CB00C80A43 /* Expenses.storyboard in Resources */,
+				CB2054972191A1CB00C80A43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +279,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2054C42191A2A700C80A43 /* ExpensesViewModel.swift in Sources */,
-				CB2054C62191A2BB00C80A43 /* AddExpenseViewController.swift in Sources */,
-				CB2054942191A1CB00C80A43 /* ViewController.swift in Sources */,
+				CBFF41842191AB6500C28FED /* AddExpenseViewController.swift in Sources */,
+				CBFF418A2191CD5300C28FED /* ExpenseSharedInstance.swift in Sources */,
+				CBFF41882191C62300C28FED /* ExpenseTableViewCell.swift in Sources */,
 				CB2054C82191A2D300C80A43 /* AddExpenseViewModel.swift in Sources */,
 				CB2054C22191A29400C80A43 /* ExpensesViewController.swift in Sources */,
 				CB2054C02191A21200C80A43 /* ExpenseItem.swift in Sources */,
@@ -313,12 +321,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB2054952191A1CB00C80A43 /* Expenses.storyboard */ = {
+		CB2054952191A1CB00C80A43 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CB2054962191A1CB00C80A43 /* Base */,
 			);
-			name = Expenses.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		CB20549A2191A1CE00C80A43 /* LaunchScreen.storyboard */ = {
